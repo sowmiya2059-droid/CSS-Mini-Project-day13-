@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint"  content="width=device-width,initial-scale=1.0">
+    <title>CSS Mini Project (day 13)</title>
+    <link rel="Sytlesheet" href="Style.css">
+    <Style>
+/*Task 1*/
+    /* Navbar Styles */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .navbar a:hover {
+      color: #ccc;
+    }
+    
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
+      .navbar li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+/*Task 2*/
+         .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .card {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .grid .card:nth-child(3) {
+            grid-column: span 2;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+ /*Task 3*/
+.product-gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* mobile-first single column */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tablet view: 2 columns */
+@media (min-width: 600px) {
+    .product-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop view: 4 columns */
+@media (min-width: 1024px) {
+    .product-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-item {
+    background: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.product-item p {
+    margin: 0;
+    color: #555;
+}
+/*Task 4*/
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    background: #333;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .features-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .feature-item {
+        width: 30%;
+    }
+    .hero-section h1 {
+        font-size: 48px;
+    }
+    .cta-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section h1 {
+        font-size: 60px;
+    }
+    .features-section h2 {
+        font-size: 36px;
+    }
+}
+/*Task 5*/
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pricing-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.pricing-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card li {
+    margin-bottom: 10px;
+}
+
+.pricing-card button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.popular {
+    background: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.popular button {
+    background: #fff;
+    color: #007bff;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .pricing-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .pricing-card {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricing-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .pricing-card {
+        width: 30%;
+    }
+}
+/*Task 6*/
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.testimonial-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 0 0 90%;
+    scroll-snap-align: start;
+}
+
+.testimonial-item p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.testimonial-item h4 {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .testimonial-item {
+        flex: 0 0 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .testimonial-item {
+        flex: 0 0 30%;
+    }
+}
+/*Task 7*/
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.footer-section {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-column {
+    padding: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media li {
+    margin-bottom: 0;
+}
+
+.social-media a {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-column {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .footer-column {
+        width: 23%;
+    }
+    .social-media a {
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+/*Task 8*/
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 00.3s;
+}
+
+.team-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.team-member:hover .team-info {
+    transform: translateY(0);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.team-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+    
+
+    
+ 
+
+
+
+</style>
+</head>
+<body>
+<h1>Mini Project 1</h1>
+<h2>Responsive Navbar</h2>
+<nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a><li></li>               
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+<h1>Mini Project 2</h1>
+<h2>Responsive Card Layout</h2>
+      <div class="container">
+        <div class="card-group grid">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Content of Card 1</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Content of Card 2</p>
+            </div>
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Content of Card 3</p>
+            </div>
+        </div>
+        <div class="card-group">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Content of Card 1</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Content of Card 2</p>
+            </div>
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Content of Card 3</p>
+            </div>
+        </div>
+    </div>
+<h1>Mini Project 3</h1>
+<h2>Responsive Grid-Based Product Gallery</h2>
+<div class="product-gallery">
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Price: Rs. 10.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Price: Rs. 15.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Price: Rs. 20.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Price: Rs. 25.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Price: Rs. 30.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>Price: Rs. 35.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 7">
+            <h3>Product 7</h3>
+            <p>Price: Rs. 40.00</p>
+        </div>
+        <div class="product-item">
+            <img src="Rose.JPEG Image.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Price: Rs. 45.00</p>
+        </div>
+    </div>
+<h1>Mini Project 4</h1>
+<h2>Responsive Landing Page</h2>
+<header class="hero-section">
+        <h1>Welcome to Our Service</h1>
+        <p>Discover the best features and benefits of our product.</p>
+        <button class="cta-button">Get Started</button>
+    </header>
+    <section class="features-section">
+        <h2>Our Key Features</h2>
+        <div class="features-container">
+            <div class="feature-item">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Feature 3</h3>
+                <p>Description of feature 3.</p>
+            </div>
+        </div>
+    </section>
+<h1>Mini Project 5</h1>
+<h2>Responsive Pricing Table</h2>
+    <section class="pricing-section">
+        <h2>Our Pricing Plans</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$9.99/month</p>
+                <ul>
+                    <li>✓ 10GB Storage</li>
+                    <li>✓ Email Support</li>
+                    <li>✗ Custom Domain</li>
+                </ul>
+                <button>Sign Up</button>
+            </div>
+            <div class="pricing-card popular">
+                <h3>Standard</h3>
+                <p class="price">$14.99/month</p>
+                <ul>
+                    <li>✓ 50GB Storage</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ Custom Domain</li>
+                    <li>✓ Email Support</li>
+                </ul>
+                <button>Sign Up</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p class="price">$19.99/month</p>
+                <ul>
+                    <li>✓ Unlimited Storage</li>
+                    <li>✓ 24/7 Support</li>
+                    <li>✓ Custom Domain & Analytics</li>
+                    <li>1 User Access</li>
+                    <li>Validity 30days</li>
+                </ul>
+                <button>Sign Up</button>
+            </div>
+        </div>
+    </section>
+<h1>Mini Project 6</h1>
+<h2>Responsive Testimonial Slider</h2>
+<section class="testimonial-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-item">
+                <p>"This is a great product! I highly recommend it."</p>
+                <h4>John Doe</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Excellent service and support. I'm a happy customer!"</p>
+                <h4>Jane Smith</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"The best decision I made was choosing this product."</p>
+                <h4>Bob Johnson</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Highly recommend this to anyone looking for quality."</p>
+                <h4>Alice Brown</h4>
+            </div>
+            <div class="testimonial-item">
+                <p>"Fantastic experience from start to finish. Thanks!"</p>
+                <h4>Mike Davis</h4>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+<h1>Mini Project 7</h1>
+<h2>Responsive Footer Layout</h2>
+<footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>               
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>              
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>123 Main St, Anytown, USA</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>                                          
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>                                            
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Example Company. All rights reserved.</p>
+        </div>
+    </footer>
+<h1>Mini Project 8</h1>
+<h2>Responsive Team Member Grid </h2>
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="Author 1.JPEG Image.jpg" alt="Team Member 1">
+                <div class="team-info">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>                                     
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="Author 2.JPEG Image.jpg" alt="Team Member 2">
+                <div class="team-info">
+                    <h3>Jane Smith</h3>
+                    <p>Marketing Manager</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-facebook-f"></i></a>                                       
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>                                      
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="Author 3.JPEG Image.jpg" alt="Team Member 3">
+                <div class="team-info">
+                    <h3>Bob Johnson</h3>
+                    <p>Software Engineer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>                                   
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="Author 5.IPEG Image.jpg" alt="Team Member 4">
+                <div class="team-info">
+                    <h3>Alice Brown</h3>
+                    <p>UX Designer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-facebook-f"></i></a>                                        
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>
